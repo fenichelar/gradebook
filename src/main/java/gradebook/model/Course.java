@@ -28,10 +28,6 @@ public class Course {
     /** The prerequisites. */
     private ArrayList<Course> prerequisites;
 
-    /** The score calculated. */
-    private boolean scoreCalculated =
-            false;
-
     /** The letter grade. */
     private String letterGrade;
 
@@ -216,8 +212,6 @@ public class Course {
                 Double.parseDouble(new DecimalFormat(
                         "#.##")
                         .format(averageScore));
-        scoreCalculated =
-                true;
         return averageScore;
     }
 
@@ -230,17 +224,11 @@ public class Course {
     public
             String calculateLetterGrade(
                     GradingScheme gradingScheme) {
-        if (scoreCalculated) {
-            letterGrade =
-                    gradingScheme
-                            .calculateLetterGrade(averageScore);
-        } else {
-            averageScore =
-                    calculateAverageScore(gradingScheme);
-            letterGrade =
-                    gradingScheme
-                            .calculateLetterGrade(averageScore);
-        }
+        averageScore =
+                calculateAverageScore(gradingScheme);
+        letterGrade =
+                gradingScheme
+                        .calculateLetterGrade(averageScore);
         return letterGrade;
     }
 }
