@@ -30,30 +30,13 @@ public class GradebookItem {
      * @param aScore the a score
      */
     public GradebookItem(
-            String aName, GradebookCategory aGradebookCategory, double aScore) {
-        name =
-                aName;
-        gradebookCategory =
-                aGradebookCategory;
-        score =
-                aScore;
-    }
-
-    /**
-     * Instantiates a new gradebook item.
-     *
-     * @param aName the a name
-     * @param aGradebookCategory the a gradebook category
-     * @param aScore the a score
-     */
-    public GradebookItem(
-            String aName, GradebookCategory aGradebookCategory, int aScore) {
-        name =
-                aName;
-        gradebookCategory =
-                aGradebookCategory;
-        score =
-                aScore;
+            String name, GradebookCategory gradebookCategory, double score) {
+        this.name =
+                name;
+        this.gradebookCategory =
+                gradebookCategory;
+        this.score =
+                score;
     }
 
     /**
@@ -73,9 +56,9 @@ public class GradebookItem {
      */
     public
             void setName(
-                    String aName) {
-        name =
-                aName;
+                    String name) {
+        this.name =
+                name;
     }
 
     /**
@@ -117,8 +100,8 @@ public class GradebookItem {
      */
     public
             void setScore(
-                    double aScore) {
-        score =
-                aScore;
+                    double score) {
+        this.score =
+                score;
     }
 }

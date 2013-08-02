@@ -27,9 +27,6 @@ public class Class
     private ArrayList<Section> sections =
             new ArrayList<Section>();
 
-    /** The score calculated. */
-    private boolean scoreCalculated;
-
     /** The letter grade. */
     private String letterGrade;
 
@@ -149,17 +146,11 @@ public class Class
     public
             String calculateLetterGrade(
                     GradingScheme gradingScheme) {
-        if (scoreCalculated) {
-            letterGrade =
-                    gradingScheme
-                            .calculateLetterGrade(averageScore);
-        } else {
-            averageScore =
-                    calculateAverageScore(gradingScheme);
-            letterGrade =
-                    gradingScheme
-                            .calculateLetterGrade(averageScore);
-        }
+        averageScore =
+                calculateAverageScore(gradingScheme);
+        letterGrade =
+                gradingScheme
+                        .calculateLetterGrade(averageScore);
         return letterGrade;
     }
 }
