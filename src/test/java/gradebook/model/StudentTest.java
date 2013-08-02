@@ -46,6 +46,21 @@ public class StudentTest {
             new GradebookItem(
                     "HW 2", gradebookCategory, 86);
 
+    /** The gradebook item3. */
+    private GradebookItem gradebookItem3 =
+            new GradebookItem(
+                    "HW 2", gradebookCategory, 76);
+
+    /** The gradebook item4. */
+    private GradebookItem gradebookItem4 =
+            new GradebookItem(
+                    "HW 2", gradebookCategory, 66);
+
+    /** The gradebook item5. */
+    private GradebookItem gradebookItem5 =
+            new GradebookItem(
+                    "HW 2", gradebookCategory, 42);
+
     /**
      * Test create.
      */
@@ -94,5 +109,43 @@ public class StudentTest {
                 student.calculateScore(new DefaultGrading());
         assertEquals(
                 89.5, studentScore, 0.00);
+    }
+
+    /**
+     * Letter grade calculation.
+     */
+    @Test
+    public
+            void letterGradeCalculation() {
+        student =
+                new Student(
+                        "Alec Fenichel");
+        student.addGradebookItem(gradebookItem);
+        assertEquals(
+                "A", student.calculateLetterGrade(new DefaultGrading()));
+        student =
+                new Student(
+                        "Alec Fenichel");
+        student.addGradebookItem(gradebookItem2);
+        assertEquals(
+                "B", student.calculateLetterGrade(new DefaultGrading()));
+        student =
+                new Student(
+                        "Alec Fenichel");
+        student.addGradebookItem(gradebookItem3);
+        assertEquals(
+                "C", student.calculateLetterGrade(new DefaultGrading()));
+        student =
+                new Student(
+                        "Alec Fenichel");
+        student.addGradebookItem(gradebookItem4);
+        assertEquals(
+                "D", student.calculateLetterGrade(new DefaultGrading()));
+        student =
+                new Student(
+                        "Alec Fenichel");
+        student.addGradebookItem(gradebookItem5);
+        assertEquals(
+                "F", student.calculateLetterGrade(new DefaultGrading()));
     }
 }
