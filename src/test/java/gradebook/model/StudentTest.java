@@ -100,7 +100,7 @@ public class StudentTest {
     public
             void testGradebookItems() {
         assertNotNull(
-                "add or getGradebookItems failed.", student.getGradebookItems());
+                "getGradebookItems failed.", student.getGradebookItems());
         Student student =
                 new Student(
                         "Alec Fenichel");

@@ -25,105 +25,59 @@ import org.junit.runners.JUnit4;
 public class ClassTest {
 
     /** The course. */
-    Course course =
+    private Course course =
             new Course(
                     "CS", 2340, "Objects and Design");
 
     /** The class as class. */
-    Class classAsClass =
+    private Class classAsClass =
             new Class(
                     course, "Summer 2013");
 
     /** The class as course. */
-    Course classAsCourse =
+    private Course classAsCourse =
             new Class(
                     course, "Summer 2013");
 
-    /** The section. */
-    Section section =
-            new Section(
-                    "A", classAsClass);
-
     /** The gradebook category. */
-    GradebookCategory gradebookCategory =
+    private GradebookCategory gradebookCategory =
             new GradebookCategory(
                     "Test", 1);
 
     /** The new student. */
-    Student newStudent =
+    private Student newStudent =
             new Student(
                     "Alec Fenichel");
 
     /** The new student2. */
-    Student newStudent2 =
+    private Student newStudent2 =
             new Student(
                     "John Doe");
 
     /** The new student3. */
-    Student newStudent3 =
+    private Student newStudent3 =
             new Student(
                     "Jane Doe");
 
-    /** The section2. */
-    Section section2 =
-            new Section(
-                    "B", classAsClass);
-
     /** The new student4. */
-    Student newStudent4 =
+    private Student newStudent4 =
             new Student(
                     "Jack Doe");
 
     /** The new student5. */
-    Student newStudent5 =
+    private Student newStudent5 =
             new Student(
                     "Jessica Doe");
 
-    /**
-     * Test create.
-     */
-    @Test
-    public
-            void testCreate() {
-        assertNotNull(
-                "Class as class failed", classAsClass);
-        assertNotNull(
-                "Class as course failed", classAsCourse);
-    }
+    /** The section. */
+    private Section section =
+            new Section(
+                    "A", classAsClass);
 
-    /**
-     * Test get and set.
-     */
-    @Test
-    public
-            void testGetAndSet() {
-        String subject =
-                classAsClass
-                        .getSubject();
-        int courseNumber =
-                classAsClass
-                        .getCourseNumber();
-        String courseName =
-                classAsClass
-                        .getCourseName();
-        String semester =
-                classAsClass
-                        .getSemester();
-        assertEquals(
-                "getSubject test failed.", "CS", subject);
-        assertEquals(
-                "getCourseNumber test failed.", 2340, courseNumber);
-        assertEquals(
-                "getCourseName test failed.", "Objects and Design", courseName);
-        assertEquals(
-                "getSemester test failed.", "Summer 2013", semester);
-        classAsClass
-                .setSemester("Fall 2013");
-        assertEquals(
-                "getSemester test failed.", "Fall 2013",
-                classAsClass
-                        .getSemester());
-    }
+    /** The section2. */
+    private Section section2 =
+            new Section(
+                    "B", classAsClass);
 
     /**
      * Test add and get section.
@@ -201,5 +155,183 @@ public class ClassTest {
         assertEquals(
                 "LetterGrade calculation failed.", "B", letterGrade);
 
+    }
+
+    /**
+     * Test create.
+     */
+    @Test
+    public
+            void testCreate() {
+        assertNotNull(
+                "Class as class failed", classAsClass);
+        assertNotNull(
+                "Class as course failed", classAsCourse);
+    }
+
+    /**
+     * Test get and set.
+     */
+    @Test
+    public
+            void testGetAndSet() {
+        String subject =
+                classAsClass
+                        .getSubject();
+        int courseNumber =
+                classAsClass
+                        .getCourseNumber();
+        String courseName =
+                classAsClass
+                        .getCourseName();
+        String semester =
+                classAsClass
+                        .getSemester();
+        assertEquals(
+                "getSubject test failed.", "CS", subject);
+        assertEquals(
+                "getCourseNumber test failed.", 2340, courseNumber);
+        assertEquals(
+                "getCourseName test failed.", "Objects and Design", courseName);
+        assertEquals(
+                "getSemester test failed.", "Summer 2013", semester);
+        classAsClass
+                .setSemester("Fall 2013");
+        assertEquals(
+                "getSemester test failed.", "Fall 2013",
+                classAsClass
+                        .getSemester());
+    }
+
+    public
+            Course getCourse() {
+        return course;
+    }
+
+    public
+            void setCourse(
+                    Course course) {
+        this.course =
+                course;
+    }
+
+    public
+            Class getClassAsClass() {
+        return classAsClass;
+    }
+
+    public
+            void setClassAsClass(
+                    Class classAsClass) {
+        this.classAsClass =
+                classAsClass;
+    }
+
+    public
+            Course getClassAsCourse() {
+        return classAsCourse;
+    }
+
+    public
+            void setClassAsCourse(
+                    Course classAsCourse) {
+        this.classAsCourse =
+                classAsCourse;
+    }
+
+    public
+            GradebookCategory getGradebookCategory() {
+        return gradebookCategory;
+    }
+
+    public
+            void setGradebookCategory(
+                    GradebookCategory gradebookCategory) {
+        this.gradebookCategory =
+                gradebookCategory;
+    }
+
+    public
+            Student getNewStudent() {
+        return newStudent;
+    }
+
+    public
+            void setNewStudent(
+                    Student newStudent) {
+        this.newStudent =
+                newStudent;
+    }
+
+    public
+            Student getNewStudent2() {
+        return newStudent2;
+    }
+
+    public
+            void setNewStudent2(
+                    Student newStudent2) {
+        this.newStudent2 =
+                newStudent2;
+    }
+
+    public
+            Student getNewStudent3() {
+        return newStudent3;
+    }
+
+    public
+            void setNewStudent3(
+                    Student newStudent3) {
+        this.newStudent3 =
+                newStudent3;
+    }
+
+    public
+            Student getNewStudent4() {
+        return newStudent4;
+    }
+
+    public
+            void setNewStudent4(
+                    Student newStudent4) {
+        this.newStudent4 =
+                newStudent4;
+    }
+
+    public
+            Student getNewStudent5() {
+        return newStudent5;
+    }
+
+    public
+            void setNewStudent5(
+                    Student newStudent5) {
+        this.newStudent5 =
+                newStudent5;
+    }
+
+    public
+            Section getSection() {
+        return section;
+    }
+
+    public
+            void setSection(
+                    Section section) {
+        this.section =
+                section;
+    }
+
+    public
+            Section getSection2() {
+        return section2;
+    }
+
+    public
+            void setSection2(
+                    Section section2) {
+        this.section2 =
+                section2;
     }
 }

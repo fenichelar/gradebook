@@ -9,7 +9,7 @@
     <path id="classpath">
       <pathelement path="target/classes"/>
       <fileset dir="lib" includes="**/*.jar"/>
-    </path>    
+    </path>
   </target>
 
   <target name="compile" depends="init">
@@ -44,12 +44,12 @@
 
   <taskdef resource="checkstyletask.properties"
            classpath="lib/checkstyle-5.6-all.jar"/>
-  
+
   <target name="checkstyle" depends="init"
           description="Generates a report of code convention violations.">
     <checkstyle config="sun_checks.xml">
       <classpath refid="classpath"/>
-      <fileset dir="src/main/java" includes="**/*.java"/>
+      <fileset dir="src" includes="**/*.java"/>
       <formatter type="plain" toFile="target/reports/checkstyle.txt"/>
     </checkstyle>
   </target>

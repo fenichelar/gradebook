@@ -26,42 +26,42 @@ import org.junit.runners.JUnit4;
 public class SectionTest {
 
     /** The course. */
-    Course course =
+    private Course course =
             new Course(
                     "CS", 2340, "Objects and Design");
 
     /** The parent class. */
-    Class parentClass =
+    private Class parentClass =
             new Class(
                     course, "Summer 2013");
 
     /** The parent class2. */
-    Class parentClass2 =
+    private Class parentClass2 =
             new Class(
                     course, "Fall 2013");
 
     /** The section. */
-    Section section =
+    private Section section =
             new Section(
                     "A", parentClass);
 
     /** The new student. */
-    Student newStudent =
+    private Student newStudent =
             new Student(
                     "Alec Fenichel");
 
     /** The gradebook category. */
-    GradebookCategory gradebookCategory =
+    private GradebookCategory gradebookCategory =
             new GradebookCategory(
                     "Test", 1);
 
     /** The new student2. */
-    Student newStudent2 =
+    private Student newStudent2 =
             new Student(
                     "John Doe");
 
     /** The new student3. */
-    Student newStudent3 =
+    private Student newStudent3 =
             new Student(
                     "Jane Doe");
 
@@ -151,5 +151,101 @@ public class SectionTest {
                 section.calculateAverageScore(defaultGrading);
         assertEquals(
                 78.33, averageScore, 0.00);
+    }
+
+    public
+            Course getCourse() {
+        return course;
+    }
+
+    public
+            void setCourse(
+                    Course course) {
+        this.course =
+                course;
+    }
+
+    public
+            Class getParentClass() {
+        return parentClass;
+    }
+
+    public
+            void setParentClass(
+                    Class parentClass) {
+        this.parentClass =
+                parentClass;
+    }
+
+    public
+            Class getParentClass2() {
+        return parentClass2;
+    }
+
+    public
+            void setParentClass2(
+                    Class parentClass2) {
+        this.parentClass2 =
+                parentClass2;
+    }
+
+    public
+            Section getSection() {
+        return section;
+    }
+
+    public
+            void setSection(
+                    Section section) {
+        this.section =
+                section;
+    }
+
+    public
+            Student getNewStudent() {
+        return newStudent;
+    }
+
+    public
+            void setNewStudent(
+                    Student newStudent) {
+        this.newStudent =
+                newStudent;
+    }
+
+    public
+            GradebookCategory getGradebookCategory() {
+        return gradebookCategory;
+    }
+
+    public
+            void setGradebookCategory(
+                    GradebookCategory gradebookCategory) {
+        this.gradebookCategory =
+                gradebookCategory;
+    }
+
+    public
+            Student getNewStudent2() {
+        return newStudent2;
+    }
+
+    public
+            void setNewStudent2(
+                    Student newStudent2) {
+        this.newStudent2 =
+                newStudent2;
+    }
+
+    public
+            Student getNewStudent3() {
+        return newStudent3;
+    }
+
+    public
+            void setNewStudent3(
+                    Student newStudent3) {
+        this.newStudent3 =
+                newStudent3;
     }
 }
