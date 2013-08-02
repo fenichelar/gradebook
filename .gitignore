@@ -11,6 +11,7 @@
 
 # System Files #
 .DS_Store
+.classpath
 
 # Eclipse Files #
 .externalToolBuilders
