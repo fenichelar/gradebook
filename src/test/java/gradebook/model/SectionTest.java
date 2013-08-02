@@ -7,6 +7,7 @@ package gradebook.model;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
@@ -33,6 +34,11 @@ public class SectionTest {
     Class parentClass =
             new Class(
                     course, "Summer 2013");
+
+    /** The parent class. */
+    Class parentClass2 =
+            new Class(
+                    course, "Fall 2013");
 
     /** The section. */
     Section section =
@@ -80,6 +86,32 @@ public class SectionTest {
                 section.getStudents();
         assertTrue(
                 "Add and Get students failed.", students.contains(newStudent));
+    }
+
+    /**
+     * Test set and get section name.
+     */
+    @Test
+    public
+            void testSetAndGetSectionName() {
+        assertEquals(
+                "A", section.getSectionName());
+        section.setSectionName("B");
+        assertEquals(
+                "B", section.getSectionName());
+    }
+
+    /**
+     * Test set and get parent class.
+     */
+    @Test
+    public
+            void testSetAndGetParentClass() {
+        assertSame(
+                parentClass, section.getParentClass());
+        section.setParentClass(parentClass2);
+        assertEquals(
+                parentClass2, section.getParentClass());
     }
 
     /**
