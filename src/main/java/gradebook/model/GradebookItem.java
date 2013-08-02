@@ -25,9 +25,9 @@ public class GradebookItem {
     /**
      * Instantiates a new gradebook item.
      *
-     * @param aName the a name
-     * @param aGradebookCategory the a gradebook category
-     * @param aScore the a score
+     * @param name the name
+     * @param gradebookCategory the gradebook category
+     * @param score the score
      */
     public GradebookItem(
             String name, GradebookCategory gradebookCategory, double score) {
@@ -52,7 +52,7 @@ public class GradebookItem {
     /**
      * Sets the name.
      *
-     * @param aName the new name
+     * @param name the new name
      */
     public
             void setName(
@@ -96,7 +96,7 @@ public class GradebookItem {
     /**
      * Sets the score.
      *
-     * @param aScore the new score
+     * @param score the new score
      */
     public
             void setScore(

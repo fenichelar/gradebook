@@ -46,13 +46,13 @@ public class GradebookCategory {
     /**
      * Sets the name.
      *
-     * @param aName the new name
+     * @param name the new name
      */
     public
             void setName(
-                    String aName) {
-        name =
-                aName;
+                    String name) {
+        this.name =
+                name;
     }
 
     /**
@@ -68,12 +68,12 @@ public class GradebookCategory {
     /**
      * Sets the percent weight.
      *
-     * @param aPercentWeight the new percent weight
+     * @param percentWeight the new percent weight
      */
     public
             void setPercentWeight(
-                    double aPercentWeight) {
-        percentWeight =
-                aPercentWeight;
+                    double percentWeight) {
+        this.percentWeight =
+                percentWeight;
     }
 }
