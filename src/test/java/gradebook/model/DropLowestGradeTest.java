@@ -128,8 +128,11 @@ public class DropLowestGradeTest {
         double score =
                 dropLowestGrade
                         .calculateScore();
-        System.out
-                .println(score);
+        assertEquals(
+                43.96, score, 0.00);
+        score =
+                dropLowestGrade
+                        .calculateScore();
         assertEquals(
                 43.96, score, 0.00);
     }
