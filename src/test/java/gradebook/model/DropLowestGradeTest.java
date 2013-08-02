@@ -138,7 +138,7 @@ public class DropLowestGradeTest {
     }
 
     /**
-     * Letter Grade calculation.
+     * Letter grade calculation.
      */
     @Test
     public

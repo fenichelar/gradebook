@@ -38,7 +38,7 @@ public class DefaultGradingTest {
             new GradebookCategory(
                     "Quizzes", .17);
 
-    /** The final exam category. */
+    /** The final category. */
     GradebookCategory finalCategory =
             new GradebookCategory(
                     "Final", .32);
@@ -112,7 +112,7 @@ public class DefaultGradingTest {
     }
 
     /**
-     * Letter Grade calculation.
+     * Letter grade calculation.
      */
     @Test
     public

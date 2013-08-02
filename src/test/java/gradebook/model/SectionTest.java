@@ -35,7 +35,7 @@ public class SectionTest {
             new Class(
                     course, "Summer 2013");
 
-    /** The parent class. */
+    /** The parent class2. */
     Class parentClass2 =
             new Class(
                     course, "Fall 2013");
