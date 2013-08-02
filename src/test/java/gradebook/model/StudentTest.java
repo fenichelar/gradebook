@@ -8,6 +8,8 @@ package gradebook.model;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
+import java.util.ArrayList;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
@@ -35,6 +37,11 @@ public class StudentTest {
     private GradebookCategory gradebookCategory =
             new GradebookCategory(
                     "HW", 1);
+
+    /** The gradebook categor2y. */
+    private GradebookCategory gradebookCategory2 =
+            new GradebookCategory(
+                    "Quiz", 1);
 
     /** The gradebook item. */
     private GradebookItem gradebookItem =
@@ -92,9 +99,46 @@ public class StudentTest {
     @Test
     public
             void testGradebookItems() {
-        student.addGradebookItem(gradebookItem);
         assertNotNull(
                 "add or getGradebookItems failed.", student.getGradebookItems());
+        Student student =
+                new Student(
+                        "Alec Fenichel");
+        ArrayList<GradebookItem> gradebookItems =
+                new ArrayList<GradebookItem>();
+        gradebookItems
+                .add(gradebookItem);
+        student.addGradebookItem(gradebookItem);
+        assertEquals(
+                gradebookItems, student.getGradebookItems());
+        gradebookItem
+                .setScore(91);
+        assertEquals(
+                91, gradebookItem.getScore(), 0.00);
+    }
+
+    /**
+     * Test gradebook category.
+     */
+    @Test
+    public
+            void testGradebookCategory() {
+        assertNotNull(
+                "TestGradebookCategory failed.", student.getGradebookItems());
+        Student student =
+                new Student(
+                        "Alec Fenichel");
+        ArrayList<GradebookItem> gradebookItems =
+                new ArrayList<GradebookItem>();
+        gradebookItems
+                .add(gradebookItem);
+        student.addGradebookItem(gradebookItem);
+        assertEquals(
+                gradebookCategory, gradebookItem.getGradebookCategory());
+        gradebookItem
+                .setGradebookCategory(gradebookCategory2);
+        assertEquals(
+                gradebookCategory2, gradebookItem.getGradebookCategory());
     }
 
     /**
