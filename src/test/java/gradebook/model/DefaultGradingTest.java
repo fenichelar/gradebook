@@ -109,6 +109,14 @@ public class DefaultGradingTest {
                         .calculateScore();
         assertEquals(
                 78.68, score, 0.00);
+    }
+
+    /**
+     * Letter Grade calculation.
+     */
+    @Test
+    public
+            void letterGradeCalculation() {
         assertEquals(
                 "A", defaultGrading.calculateLetterGrade(92));
         assertEquals(

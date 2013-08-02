@@ -136,4 +136,22 @@ public class DropLowestGradeTest {
         assertEquals(
                 43.96, score, 0.00);
     }
+
+    /**
+     * Letter Grade calculation.
+     */
+    @Test
+    public
+            void letterGradeCalculation() {
+        assertEquals(
+                "A", dropLowestGrade.calculateLetterGrade(92));
+        assertEquals(
+                "B", dropLowestGrade.calculateLetterGrade(83));
+        assertEquals(
+                "C", dropLowestGrade.calculateLetterGrade(75));
+        assertEquals(
+                "D", dropLowestGrade.calculateLetterGrade(64));
+        assertEquals(
+                "F", dropLowestGrade.calculateLetterGrade(35));
+    }
 }
