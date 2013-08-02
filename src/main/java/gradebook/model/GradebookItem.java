@@ -74,7 +74,7 @@ public class GradebookItem {
     /**
      * Sets the gradebook category.
      *
-     * @param aGradebookCategory the new gradebook category
+     * @param gradebookCategory the new gradebook category
      */
     public
             void setGradebookCategory(

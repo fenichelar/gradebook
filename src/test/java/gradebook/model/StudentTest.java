@@ -38,7 +38,7 @@ public class StudentTest {
             new GradebookCategory(
                     "HW", 1);
 
-    /** The gradebook categor2y. */
+    /** The gradebook category2. */
     private GradebookCategory gradebookCategory2 =
             new GradebookCategory(
                     "Quiz", 1);
@@ -115,6 +115,13 @@ public class StudentTest {
                 .setScore(91);
         assertEquals(
                 91, gradebookItem.getScore(), 0.00);
+        assertEquals(
+                "HW 1", gradebookItem.getName());
+        gradebookItem
+                .setName("HW 0");
+        assertEquals(
+                "HW 0", gradebookItem.getName());
+
     }
 
     /**
@@ -139,6 +146,16 @@ public class StudentTest {
                 .setGradebookCategory(gradebookCategory2);
         assertEquals(
                 gradebookCategory2, gradebookItem.getGradebookCategory());
+        assertEquals(
+                "Quiz", gradebookCategory2.getName());
+        gradebookCategory2
+                .setName("Test");
+        assertEquals(
+                "Test", gradebookCategory2.getName());
+        gradebookCategory2
+                .setPercentWeight(0);
+        assertEquals(
+                0, gradebookCategory2.getPercentWeight(), 0.00);
     }
 
     /**
