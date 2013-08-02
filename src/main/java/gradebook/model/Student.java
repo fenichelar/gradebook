@@ -27,10 +27,6 @@ public class Student {
     /** The letter grade. */
     private String letterGrade;
 
-    /** The score calculated. */
-    private boolean scoreCalculated =
-            false;
-
     /**
      * Instantiates a new student.
      *
@@ -100,8 +96,6 @@ public class Student {
         score =
                 gradingScheme
                         .calculateScore();
-        scoreCalculated =
-                true;
         return score;
     }
 
@@ -114,17 +108,11 @@ public class Student {
     public
             String calculateLetterGrade(
                     GradingScheme gradingScheme) {
-        if (scoreCalculated) {
-            letterGrade =
-                    gradingScheme
-                            .calculateLetterGrade(score);
-        } else {
-            score =
-                    calculateScore(gradingScheme);
-            letterGrade =
-                    gradingScheme
-                            .calculateLetterGrade(score);
-        }
+        score =
+                calculateScore(gradingScheme);
+        letterGrade =
+                gradingScheme
+                        .calculateLetterGrade(score);
         return letterGrade;
     }
 }
