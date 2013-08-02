@@ -78,9 +78,9 @@ public class GradebookItem {
      */
     public
             void setGradebookCategory(
-                    GradebookCategory aGradebookCategory) {
-        gradebookCategory =
-                aGradebookCategory;
+                    GradebookCategory gradebookCategory) {
+        this.gradebookCategory =
+                gradebookCategory;
     }
 
     /**
