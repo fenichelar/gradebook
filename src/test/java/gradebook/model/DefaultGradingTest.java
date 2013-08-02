@@ -109,5 +109,15 @@ public class DefaultGradingTest {
                         .calculateScore();
         assertEquals(
                 78.68, score, 0.00);
+        assertEquals(
+                "A", defaultGrading.calculateLetterGrade(92));
+        assertEquals(
+                "B", defaultGrading.calculateLetterGrade(83));
+        assertEquals(
+                "C", defaultGrading.calculateLetterGrade(75));
+        assertEquals(
+                "D", defaultGrading.calculateLetterGrade(64));
+        assertEquals(
+                "F", defaultGrading.calculateLetterGrade(35));
     }
 }

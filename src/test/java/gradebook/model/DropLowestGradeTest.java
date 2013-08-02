@@ -110,4 +110,27 @@ public class DropLowestGradeTest {
         assertEquals(
                 81.2, score, 0.00);
     }
+
+    /**
+     * Test no score calculation.
+     */
+    @Test
+    public
+            void testNoScoreCalculation() {
+        gradebookItems
+                .clear();
+        gradebookItems
+                .add(test1);
+        dropLowestGrade =
+                new DropLowestGrade();
+        dropLowestGrade
+                .addGradebookItems(gradebookItems);
+        double score =
+                dropLowestGrade
+                        .calculateScore();
+        System.out
+                .println(score);
+        assertEquals(
+                43.96, score, 0.00);
+    }
 }

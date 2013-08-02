@@ -117,6 +117,12 @@ public class ClassTest {
                 "getCourseName test failed.", "Objects and Design", courseName);
         assertEquals(
                 "getSemester test failed.", "Summer 2013", semester);
+        classAsClass
+                .setSemester("Fall 2013");
+        assertEquals(
+                "getSemester test failed.", "Fall 2013",
+                classAsClass
+                        .getSemester());
     }
 
     /**
